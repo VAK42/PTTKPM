@@ -1,0 +1,103 @@
+### **3-LAYER ARCHITECTURE MODEL - MÔ HÌNH 3 LỚP**
+
+```mermaid
+graph TB
+    subgraph "PRESENTATION LAYER - LỚP TRÌNH DIỄN"
+        subgraph "Frontend Applications"
+            WebApp[Web Application<br/>React/Vue.js]
+            MobileApp[Mobile Application<br/>React Native/Flutter]
+            AdminPanel[Admin Panel<br/>React/Angular]
+        end
+        
+        subgraph "API Layer"
+            RESTAPI[REST API<br/>Express.js/FastAPI]
+            GraphQL[GraphQL API<br/>Apollo Server]
+            WebSocket[WebSocket<br/>Real-time Communication]
+        end
+    end
+    
+    subgraph "BUSINESS LOGIC LAYER - LỚP NGHIỆP VỤ"
+        subgraph "Service Layer"
+            UserService[User Service<br/>Authentication & Authorization]
+            ProductService[Product Service<br/>Product Management]
+            OrderService[Order Service<br/>Order Processing]
+            PaymentService[Payment Service<br/>Payment Processing]
+            InventoryService[Inventory Service<br/>Stock Management]
+            NotificationService[Notification Service<br/>Email/SMS/Push]
+            ReportService[Report Service<br/>Analytics & Reporting]
+        end
+        
+        subgraph "Business Rules"
+            ValidationRules[Validation Rules<br/>Data Validation]
+            BusinessRules[Business Rules<br/>Business Logic]
+            WorkflowEngine[Workflow Engine<br/>Process Automation]
+        end
+        
+        subgraph "Integration Layer"
+            ExternalAPIs[External APIs<br/>Payment Gateways]
+            MessageQueue[Message Queue<br/>RabbitMQ/Kafka]
+            CacheLayer[Cache Layer<br/>Redis/Memcached]
+        end
+    end
+    
+    subgraph "DATA ACCESS LAYER - LỚP TRUY CẬP DỮ LIỆU"
+        subgraph "Repository Pattern"
+            UserRepo[User Repository<br/>User Data Access]
+            ProductRepo[Product Repository<br/>Product Data Access]
+            OrderRepo[Order Repository<br/>Order Data Access]
+            InventoryRepo[Inventory Repository<br/>Inventory Data Access]
+        end
+        
+        subgraph "Database Layer"
+            PrimaryDB[(Primary Database<br/>MySQL/PostgreSQL)]
+            CacheDB[(Cache Database<br/>Redis)]
+            SearchDB[(Search Database<br/>Elasticsearch)]
+            FileStorage[(File Storage<br/>AWS S3/Google Cloud)]
+        end
+        
+        subgraph "Data Models"
+            EntityModels[Entity Models<br/>Domain Objects]
+            DTOs[Data Transfer Objects<br/>API Contracts]
+            ViewModels[View Models<br/>UI Data Models]
+        end
+    end
+    
+    %% Layer Connections
+    WebApp --> RESTAPI
+    MobileApp --> RESTAPI
+    AdminPanel --> RESTAPI
+    WebApp --> GraphQL
+    MobileApp --> WebSocket
+    
+    RESTAPI --> UserService
+    RESTAPI --> ProductService
+    RESTAPI --> OrderService
+    GraphQL --> UserService
+    GraphQL --> ProductService
+    WebSocket --> NotificationService
+    
+    UserService --> ValidationRules
+    ProductService --> BusinessRules
+    OrderService --> WorkflowEngine
+    PaymentService --> ExternalAPIs
+    NotificationService --> MessageQueue
+    ReportService --> CacheLayer
+    
+    UserService --> UserRepo
+    ProductService --> ProductRepo
+    OrderService --> OrderRepo
+    InventoryService --> InventoryRepo
+    
+    UserRepo --> PrimaryDB
+    ProductRepo --> PrimaryDB
+    OrderRepo --> PrimaryDB
+    InventoryRepo --> PrimaryDB
+    
+    UserService --> CacheDB
+    ProductService --> SearchDB
+    ProductService --> FileStorage
+    
+    UserRepo --> EntityModels
+    ProductRepo --> DTOs
+    OrderRepo --> ViewModels
+```
