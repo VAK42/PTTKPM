@@ -1,4 +1,4 @@
-### **MASTER CLASS DIAGRAM - KIẾN TRÚC HỆ THỐNG TỔNG THỂ**
+### **CLASS DIAGRAM - KIẾN TRÚC HỆ THỐNG TỔNG THỂ**
 
 ```mermaid
 classDiagram
