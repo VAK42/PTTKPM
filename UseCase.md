@@ -1,4 +1,4 @@
-# Lumiere - Women's Clothing Shop
+# Lumiere - Clothing Shop
 ## Comprehensive System Diagrams
 
 ### A. Tài Khoản & Xác Thực (Account & Authentication)
@@ -879,7 +879,7 @@ classDiagram
     Product --> ProductService : uses
 ```
 
-#### 10. Tìm Kiếm Theo Từ Khóa (Search by Keywords)
+#### 10. Tìm Kiếm Theo Từ Khóa (Search By Keywords)
 
 **Activity Diagram:**
 ```mermaid
@@ -996,7 +996,7 @@ classDiagram
     SearchService --> Product : searches
 ```
 
-#### 11. Lọc Theo Size/Màu/Khoảng Giá (Filter by Size/Color/Price Range)
+#### 11. Lọc Theo Size/Màu/Khoảng Giá (Filter By Size/Color/Price Range)
 
 **Activity Diagram:**
 ```mermaid
@@ -1489,7 +1489,7 @@ classDiagram
     SizeGuide --> SizeGuideService : uses
 ```
 
-#### 15. Kiểm Tra Tồn Kho Theo Biến Thể (Check Stock by Variant)
+#### 15. Kiểm Tra Tồn Kho Theo Biến Thể (Check Stock By Variant)
 
 **Activity Diagram:**
 ```mermaid
@@ -1720,7 +1720,7 @@ classDiagram
 
 ### C. Giỏ Hàng & Mua Sắm (Shopping Cart & Purchase)
 
-#### 17. Thêm Biến Thể Vào Giỏ (Add Variant to Cart)
+#### 17. Thêm Biến Thể Vào Giỏ (Add Variant To Cart)
 
 **Activity Diagram:**
 ```mermaid
@@ -1856,7 +1856,7 @@ classDiagram
     CartItem --> ProductVariant : references
 ```
 
-#### 18. Cập Nhật Số Lượng Trong Giỏ (Update Quantity in Cart)
+#### 18. Cập Nhật Số Lượng Trong Giỏ (Update Quantity In Cart)
 
 **Activity Diagram:**
 ```mermaid
@@ -2906,7 +2906,7 @@ classDiagram
     ReviewService --> AdminService : notifies
 ```
 
-#### 30. Thêm Sản Phẩm Vào Wishlist (Add Product to Wishlist)
+#### 30. Thêm Sản Phẩm Vào Wishlist (Add Product To Wishlist)
 
 **Activity Diagram:**
 ```mermaid
@@ -3755,7 +3755,7 @@ classDiagram
 
 ### H. Báo Cáo & Hệ Thống (Reports & System)
 
-#### 39. Báo Cáo Doanh Thu Theo Thời Gian (Revenue Report by Time)
+#### 39. Báo Cáo Doanh Thu Theo Thời Gian (Revenue Report By Time)
 
 **Activity Diagram:**
 ```mermaid
