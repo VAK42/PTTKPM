@@ -1,4 +1,4 @@
-### **MASTER SEQUENCE DIAGRAM - TƯƠNG TÁC HỆ THỐNG TỔNG THỂ**
+### **SEQUENCE DIAGRAM - TƯƠNG TÁC HỆ THỐNG TỔNG THỂ**
 
 ```mermaid
 sequenceDiagram
