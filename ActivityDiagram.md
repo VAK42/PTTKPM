@@ -1,4 +1,4 @@
-### **MASTER ACTIVITY DIAGRAM - QUY TRÌNH TỔNG THỂ**
+### **ACTIVITY DIAGRAM - QUY TRÌNH TỔNG THỂ**
 
 ```mermaid
 flowchart TD
