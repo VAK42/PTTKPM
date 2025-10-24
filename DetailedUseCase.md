@@ -1,4 +1,3 @@
-# Lumiere - Clothing Shop
 ## Comprehensive System Diagrams
 
 ### A. Tài Khoản & Xác Thực (Account & Authentication)
